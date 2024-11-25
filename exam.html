@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .signup {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        input, textarea {
+            width: 90%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 95%;
+            padding: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        p a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Registration Form</h3>
+    <div class="signup">
+        <h1>Sign Up</h1>
+        <form method="POST" onsubmit="showAlert(event)">
+            <label for="username">Name: *</label><br>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="email">Email: *</label><br>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="password">Password: *</label><br>
+            <input type="password" id="password" name="password" required><br>
+
+            <label for="phno">Phone Number: *</label><br>
+            <input type="text" id="phno" name="phno" required><br>
+
+            <label>Gender: *</label><br>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label><br>
+
+            <label for="address">Address: *</label><br>
+            <textarea id="address" name="address" rows="3" required></textarea><br>
+
+            <input type="submit" value="Submit">
+        </form>
+        <p>Already have an account? <a href="login.php">Login</a></p>
+    </div>
+
+    <script>
+        function showAlert(event) {
+            event.preventDefault(); // Prevent form submission for the demo
+            alert("Registration successful!");
+        }
+    </script>
+</body>
+
+</html>
